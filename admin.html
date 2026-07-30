@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Admin Dashboard | CarDeal</title>
+
+<link rel="stylesheet" href="style.css">
+
+<style>
+
+body{
+    margin:0;
+    background:#f5f5f5;
+    font-family:Arial, sans-serif;
+}
+
+.header{
+    background:#111;
+    color:#fff;
+    padding:18px;
+    text-align:center;
+}
+
+.container{
+    width:90%;
+    max-width:1100px;
+    margin:30px auto;
+}
+
+.form{
+    background:#fff;
+    padding:20px;
+    border-radius:10px;
+    box-shadow:0 5px 15px rgba(0,0,0,.15);
+    margin-bottom:30px;
+}
+
+.form h2{
+    margin-bottom:20px;
+}
+
+.form input{
+    width:100%;
+    padding:12px;
+    margin:10px 0;
+    border:1px solid #ccc;
+    border-radius:6px;
+}
+
+.form button{
+    padding:12px 20px;
+    background:#ff3c00;
+    color:#fff;
+    border:none;
+    border-radius:6px;
+    cursor:pointer;
+}
+
+table{
+    width:100%;
+    border-collapse:collapse;
+    background:#fff;
+}
+
+table th{
+    background:#111;
+    color:#fff;
+    padding:12px;
+}
+
+table td{
+    padding:12px;
+    border-bottom:1px solid #ddd;
+    text-align:center;
+}
+
+.edit{
+    background:green;
+    color:white;
+    border:none;
+    padding:8px 12px;
+    cursor:pointer;
+}
+
+.delete{
+    background:red;
+    color:white;
+    border:none;
+    padding:8px 12px;
+    cursor:pointer;
+}
+
+.logout{
+    float:right;
+    margin-top:-45px;
+    margin-right:20px;
+    background:#ff3c00;
+    color:white;
+    padding:10px 20px;
+    text-decoration:none;
+    border-radius:6px;
+}
+
+</style>
+
+</head>
+
+<body>
+
+<div class="header">
+
+<h1>Admin Dashboard</h1>
+
+<a href="login.html" class="logout">Logout</a>
+
+</div>
+
+<div class="container">
+
+<div class="form">
+
+<h2>Add / Edit Car</h2>
+
+<input type="hidden" id="carIndex">
+
+<input
+type="text"
+id="carName"
+placeholder="Car Name">
+
+<input
+type="text"
+id="carPrice"
+placeholder="Price">
+
+<input
+type="text"
+id="carImage"
+placeholder="Image Path (images/car1.jpg)">
+
+<button onclick="saveCar()">Save Car</button>
+
+</div>
+
+<table>
+
+<thead>
+
+<tr>
+
+<th>Image</th>
+
+<th>Car Name</th>
+
+<th>Price</th>
+
+<th>Edit</th>
+
+<th>Delete</th>
+
+</tr>
+
+</thead>
+
+<tbody id="tableBody">
+
+</tbody>
+
+</table>
+
+</div>
+
+<script src="admin.js"></script>
+
+</body>
+</html>
